@@ -19,3 +19,15 @@ services:
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
+workers:
+  - name: my-worker
+    type: worker
+    repo: https://github.com/your-org/your-repo
+    branch: main
+    env: ruby
+    plan: starter
+    buildCommand: "bundle install"
+    startCommand: REDIS_URL="redis://${REDIS_HOST}" bundle exec sidekiq -e production
+    env:
+      RAILS_ENV: production
+    plan: starter
