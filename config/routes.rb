@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get "results/index"
+  get "taxes/index"
+  get "documents/index"
+  get "products/index"
   get "records/index"
   resources :uploads, only: [ :new, :create, :show ]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

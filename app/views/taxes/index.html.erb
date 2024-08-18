@@ -1,0 +1,23 @@
+ <h2>Taxes</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>ICMS</th>
+        <th>IPI</th>
+        <th>PIS</th>
+        <th>COFINS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @taxes.each do |tax| %>
+        <tr>
+          <td><%= tax.id %></td>
+          <td><%= tax.vICMS %></td>
+          <td><%= tax.vIPI %></td>
+          <td><%= tax.vPIS %></td>
+          <td><%= tax.vCOFINS %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>

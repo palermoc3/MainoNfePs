@@ -1,0 +1,33 @@
+<h1>Documentos</h1>
+
+<form method="get" action="<%= documents_index_path %>">
+  <input type="text" name="search" placeholder="Buscar pela serie" value="<%= params[:search] %>">
+  <input type="submit" value="Buscar">
+</form>
+
+<table>
+  <thead>
+    <tr>
+      <th>Série</th>
+      <th>Número NF</th>
+      <th>Data de Emissão</th>
+      <th>Emitente CNPJ</th>
+      <th>Emitente Nome</th>
+      <th>Destinatário CNPJ</th>
+      <th>Destinatário Nome</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @documents.each do |document| %>
+      <tr>
+        <td><%= document.serie %></td>
+        <td><%= document.nNF %></td>
+        <td><%= document.dhEmi %></td>
+        <td><%= document.emit_cnpj %></td>
+        <td><%= document.emit_xNome %></td>
+        <td><%= document.dest_cnpj %></td>
+        <td><%= document.dest_xNome %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

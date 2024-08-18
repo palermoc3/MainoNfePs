@@ -1,0 +1,19 @@
+  <h2>Results</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Tax</th>
+        <th>Product Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @results.each do |result| %>
+        <tr>
+          <td><%= result.id %></td>
+          <td><%= result.tax %></td>
+          <td><%= result.product_value %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>

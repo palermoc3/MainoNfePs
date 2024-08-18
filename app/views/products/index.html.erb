@@ -1,0 +1,38 @@
+<h1>Produtos</h1>
+
+<%= form_with url: products_index_path, method: :get, local: true do %>
+  <div class="field">
+    <%= label_tag :search, "Buscar por nome" %>
+    <%= text_field_tag :search, @search_query, placeholder: "Digite o nome do produto" %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Buscar" %>
+  </div>
+<% end %>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>NCM</th>
+        <th>CFOP</th>
+        <th>Unit</th>
+        <th>Quantity</th>
+        <th>Unit Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td><%= product.id %></td>
+          <td><%= product.name %></td>
+          <td><%= product.NCM %></td>
+          <td><%= product.CFOP %></td>
+          <td><%= product.uCom %></td>
+          <td><%= product.qCom %></td>
+          <td><%= product.vUnCom %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
