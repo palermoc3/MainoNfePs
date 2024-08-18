@@ -23,6 +23,9 @@ gem "hiredis"
 
 gem "nokogiri"
 gem 'aws-sdk-s3'
+
+gem 'devise'
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 

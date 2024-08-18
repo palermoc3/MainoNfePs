@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get "results/index"
   get "taxes/index"
   get "documents/index"
