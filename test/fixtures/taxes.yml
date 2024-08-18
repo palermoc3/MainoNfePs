@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  document: one
+  vICMS: 9.99
+  vIPI: 9.99
+  vPIS: 9.99
+  vCOFINS: 9.99
+
+two:
+  document: two
+  vICMS: 9.99
+  vIPI: 9.99
+  vPIS: 9.99
+  vCOFINS: 9.99

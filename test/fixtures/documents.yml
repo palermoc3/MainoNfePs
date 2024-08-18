@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  serie: MyString
+  nNF: MyString
+  dhEmi: 2024-08-18 17:57:28
+  emit_cnpj: MyString
+  emit_xNome: MyString
+  dest_cnpj: MyString
+  dest_xNome: MyString
+
+two:
+  serie: MyString
+  nNF: MyString
+  dhEmi: 2024-08-18 17:57:28
+  emit_cnpj: MyString
+  emit_xNome: MyString
+  dest_cnpj: MyString
+  dest_xNome: MyString

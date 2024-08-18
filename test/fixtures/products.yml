@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  document: one
+  name: MyString
+  NCM: MyString
+  CFOP: MyString
+  uCom: MyString
+  qCom: 9.99
+  vUnCom: 9.99
+
+two:
+  document: two
+  name: MyString
+  NCM: MyString
+  CFOP: MyString
+  uCom: MyString
+  qCom: 9.99
+  vUnCom: 9.99

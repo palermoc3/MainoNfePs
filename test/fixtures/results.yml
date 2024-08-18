@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  document: one
+  tax: 9.99
+  product_value: 9.99
+
+two:
+  document: two
+  tax: 9.99
+  product_value: 9.99
