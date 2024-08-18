@@ -39,11 +39,7 @@ services:
       - key: RAILS_MASTER_KEY
         sync: false
 
-databases:
-  - name: myapp-db
-    plan: free
-
- - type: pserv
+  - type: pserv
     name: myapp-redis
     env: docker
     repo: https://github.com/render-examples/redis.git
@@ -52,3 +48,7 @@ databases:
       name: myapp-redis-data
       mountPath: /var/lib/redis
       sizeGB: 1
+
+databases:
+  - name: myapp-db
+    plan: free
