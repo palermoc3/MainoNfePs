@@ -40,9 +40,7 @@ services:
         sync: false
 
 databases:
-  - name: portifolio
-    databaseName: portifolio
-    user: palermoc
+  - name: myapp-db
     plan: free
 
  - type: pserv
