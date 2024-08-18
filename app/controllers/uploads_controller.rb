@@ -16,7 +16,7 @@ class UploadsController < ApplicationController
       # Salve e processe o XML
       parse_and_save_xml(xml_file)
 
-      redirect_to @upload, notice: 'Arquivo XML foi carregado e processado com sucesso.'
+      redirect_to records_index_path, notice: 'Arquivo XML foi carregado e processado com sucesso.'
     else
       render :new
     end

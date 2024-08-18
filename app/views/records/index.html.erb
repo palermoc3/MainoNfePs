@@ -1,0 +1,106 @@
+
+  <h1>Registros</h1>
+
+  <h2>Documents</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Serie</th>
+        <th>NF Number</th>
+        <th>Emission Date</th>
+        <th>Emit CNPJ</th>
+        <th>Emit Name</th>
+        <th>Dest CNPJ</th>
+        <th>Dest Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @documents.each do |document| %>
+        <tr>
+          <td><%= document.id %></td>
+          <td><%= document.serie %></td>
+          <td><%= document.nNF %></td>
+          <td><%= document.dhEmi %></td>
+          <td><%= document.emit_cnpj %></td>
+          <td><%= document.emit_xNome %></td>
+          <td><%= document.dest_cnpj %></td>
+          <td><%= document.dest_xNome %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <h2>Products</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>NCM</th>
+        <th>CFOP</th>
+        <th>Unit</th>
+        <th>Quantity</th>
+        <th>Unit Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td><%= product.id %></td>
+          <td><%= product.name %></td>
+          <td><%= product.NCM %></td>
+          <td><%= product.CFOP %></td>
+          <td><%= product.uCom %></td>
+          <td><%= product.qCom %></td>
+          <td><%= product.vUnCom %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <h2>Taxes</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>ICMS</th>
+        <th>IPI</th>
+        <th>PIS</th>
+        <th>COFINS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @taxes.each do |tax| %>
+        <tr>
+          <td><%= tax.id %></td>
+          <td><%= tax.vICMS %></td>
+          <td><%= tax.vIPI %></td>
+          <td><%= tax.vPIS %></td>
+          <td><%= tax.vCOFINS %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <h2>Results</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Tax</th>
+        <th>Product Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @results.each do |result| %>
+        <tr>
+          <td><%= result.id %></td>
+          <td><%= result.tax %></td>
+          <td><%= result.product_value %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<%= link_to 'Upload de XML', new_upload_path, class: 'btn btn-primary' %>
