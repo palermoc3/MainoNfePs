@@ -1,11 +1,22 @@
-<% content_for :title, "New upload" %>
+<%= form_with(model: @upload, local: true) do |form| %>
+  <% if @upload.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@upload.errors.count, "error") %> prohibited this upload from being saved:</h2>
 
-<h1>New upload</h1>
+      <ul>
+        <% @upload.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-<%= render "form", upload: @upload %>
+  <div class="field">
+    <%= form.label :xml_file %>
+    <%= form.file_field :xml_file %>
+  </div>
 
-<br>
-
-<div>
-  <%= link_to "Back to uploads", uploads_path %>
-</div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

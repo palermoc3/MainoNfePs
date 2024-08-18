@@ -1,10 +1,10 @@
-<p style="color: green"><%= notice %></p>
+<p>
+  <strong>Arquivo XML:</strong>
+  <% if @upload.xml_file.attached? %>
+    <%= link_to 'Download', rails_blob_path(@upload.xml_file, disposition: 'attachment') %>
+  <% else %>
+    Nenhum arquivo carregado.
+  <% end %>
+</p>
 
-<%= render @upload %>
-
-<div>
-  <%= link_to "Edit this upload", edit_upload_path(@upload) %> |
-  <%= link_to "Back to uploads", uploads_path %>
-
-  <%= button_to "Destroy this upload", @upload, method: :delete %>
-</div>
+<%= link_to 'Voltar', uploads_path %>
