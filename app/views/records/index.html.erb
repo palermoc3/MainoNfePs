@@ -2,7 +2,7 @@
   <h1>Registros</h1>
 
   <h2>Documents</h2>
-  <table>
+  <table class="table table-striped px-5 ">
     <thead>
       <tr>
         <th>ID</th>
@@ -30,9 +30,9 @@
       <% end %>
     </tbody>
   </table>
-
+<%= link_to 'Tabela de documentos', documents_index_path, class: 'btn btn-primary' %>
   <h2>Products</h2>
-  <table>
+  <table class="table table-striped px-5 ">
     <thead>
       <tr>
         <th>ID</th>
@@ -58,9 +58,10 @@
       <% end %>
     </tbody>
   </table>
+<%= link_to 'Tabela de Produtos', products_index_path, class: 'btn btn-primary' %>
 
   <h2>Taxes</h2>
-  <table>
+  <table class="table table-striped px-5 ">
     <thead>
       <tr>
         <th>ID</th>
@@ -82,9 +83,10 @@
       <% end %>
     </tbody>
   </table>
+<%= link_to 'Tabela de taxas', taxes_index_path, class: 'btn btn-primary' %>
 
   <h2>Results</h2>
-  <table>
+  <table class="table table-striped px-5 ">
     <thead>
       <tr>
         <th>ID</th>
@@ -102,5 +104,6 @@
       <% end %>
     </tbody>
   </table>
-
-<%= link_to 'Upload de XML', new_upload_path, class: 'btn btn-primary' %>
+<%= link_to 'Tabela de resultados', results_index_path, class: 'btn btn-primary' %>
+<div class="pt-2"></div>
+<%= link_to 'Fazer upload de outro XMl', new_upload_path, class: 'btn btn-primary' %>

@@ -1,8 +1,7 @@
-<%= form_with(model: @upload, local: true) do |form| %>
+<%= form_with(model: @upload, local: true, html: { class: 'form-horizontal' }) do |form| %>
   <% if @upload.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@upload.errors.count, "error") %> prohibited this upload from being saved:</h2>
-
+    <div class="alert alert-danger">
+      <h4 class="alert-heading"><%= pluralize(@upload.errors.count, "error") %> prohibited this upload from being saved:</h4>
       <ul>
         <% @upload.errors.full_messages.each do |message| %>
           <li><%= message %></li>
@@ -11,12 +10,16 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :xml_file %>
-    <%= form.file_field :xml_file %>
+  <div class="form-group">
+    <%= form.label :xml_file, class: 'col-sm-2 col-form-label' %>
+    <div class="col-sm-10">
+      <%= form.file_field :xml_file, class: 'form-control' %>
+    </div>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <div class="col-sm-10 offset-sm-2">
+      <%= form.submit 'Upload', class: 'btn btn-primary mt-3' %>
+    </div>
   </div>
 <% end %>
